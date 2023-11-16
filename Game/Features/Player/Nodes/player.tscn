@@ -33,7 +33,7 @@ func _physics_process(delta):
 		position.y += sin(timer) / 2
 		# get player position in tilemap
 		var tile_pos = tilemap.local_to_map(mining_position)
-		wall_tiles = tilemap.get_wall_tiles_in_radius(4,tile_pos)
+		wall_tiles = tilemap.get_wall_tiles_near_global_position(4,tile_pos)
 		return
 	# Use smooth movement with interpolation
 	position = position.lerp(mouse_pos, 0.01)

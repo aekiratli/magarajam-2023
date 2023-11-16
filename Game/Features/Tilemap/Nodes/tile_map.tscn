@@ -1,9 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://cxsu2qmeuwq4s"]
+[gd_scene load_steps=14 format=3 uid="uid://cxsu2qmeuwq4s"]
 
 [ext_resource type="Texture2D" uid="uid://b2b1ci6kk4aq2" path="res://Game/Features/Tilemap/Sprites/tile_map.png" id="1_2v103"]
 [ext_resource type="Texture2D" uid="uid://ciw8in5ch1uux" path="res://Game/Features/Tilemap/Sprites/SeaTiles.png" id="2_j46ct"]
-[ext_resource type="Script" path="res://Game/Features/Tilemap/Scripts/MooreNeighboorGenerator.gd" id="3_tfrn6"]
+[ext_resource type="Script" path="res://Game/Features/Tilemap/Scripts/MapGenerator.gd" id="3_hkk36"]
+[ext_resource type="Script" path="res://Game/Features/Tilemap/Scripts/MapController.gd" id="3_ykp2h"]
 [ext_resource type="Script" path="res://Game/Features/Tilemap/Scripts/TilemapOutliner.gd" id="4_4n4kl"]
+[ext_resource type="Script" path="res://Game/Features/Tilemap/Scripts/NoiseGenerator.gd" id="4_4wu4v"]
+[ext_resource type="Script" path="res://Game/Features/Tilemap/Scripts/MooreNeighboor.gd" id="5_b3ccp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b07km"]
 
@@ -70,12 +73,17 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array()
-script = ExtResource("3_tfrn6")
-noise_density = 0.58
-width = 55
-height = 55
-iteration = 20
+script = ExtResource("3_ykp2h")
 
 [node name="TilemapOutliner" type="Node2D" parent="."]
 z_index = 4
 script = ExtResource("4_4n4kl")
+
+[node name="NoiseGenerator" type="Node2D" parent="."]
+script = ExtResource("4_4wu4v")
+
+[node name="MooreNeighboor" type="Node2D" parent="."]
+script = ExtResource("5_b3ccp")
+
+[node name="MapGenerator" type="Node2D" parent="."]
+script = ExtResource("3_hkk36")

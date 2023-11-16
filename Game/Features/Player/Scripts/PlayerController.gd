@@ -7,8 +7,8 @@ var is_hang_and_float = false
 var angle = 0
 var wall_tiles = []
 var mining_position = Vector2()
-@onready var tilemap = get_node("../TileMap")
-@onready var cell_size = tilemap.tile_set.tile_size
+@onready var MapController = get_node("/root/Main/Tilemap")
+@onready var cell_size = MapController.tile_set.tile_size
 
 func _physics_process(delta):
 	# Get direction
@@ -26,8 +26,8 @@ func _physics_process(delta):
 		is_hang_and_float = true
 		position.y += sin(timer) / 2
 		# get player position in tilemap
-		var tile_pos = tilemap.local_to_map(mining_position)
-		wall_tiles = tilemap.get_wall_tiles_in_radius(4,tile_pos)
+		var tile_pos = MapController.local_to_map(mining_position)
+		wall_tiles = MapController.get_wall_tiles_near_global_position(4,tile_pos)
 		return
 	# Use smooth movement with interpolation
 	position = position.lerp(mouse_pos, 0.01)

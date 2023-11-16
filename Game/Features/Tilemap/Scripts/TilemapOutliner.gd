@@ -1,15 +1,14 @@
 extends Node2D
 
-@onready var player = get_node("../../Player")
-@onready var tilemap = get_node("../../TileMap")
-@onready var cell_size = tilemap.tile_set.tile_size.x
+@onready var player = get_node("/root/Main/Player")
+@onready var Tilemap = get_parent()
+@onready var cell_size = Tilemap.tile_set.tile_size.x
 
 var is_hang_and_float = false
 var wall_tiles = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
