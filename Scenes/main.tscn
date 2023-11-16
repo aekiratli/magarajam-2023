@@ -1,0 +1,136 @@
+[gd_scene load_steps=17 format=3 uid="uid://cj5l46sirio3c"]
+
+[ext_resource type="Texture2D" uid="uid://b2b1ci6kk4aq2" path="res://Tilemaps/tile_map.png" id="1_tnxrv"]
+[ext_resource type="Texture2D" uid="uid://ciw8in5ch1uux" path="res://Tilemaps/SeaTiles.png" id="2_vtgrf"]
+[ext_resource type="Script" path="res://Scripts/MooreNeighboorGenerator.gd" id="3_vj46o"]
+[ext_resource type="Script" path="res://Scripts/TilemapOutliner.gd" id="4_jdt0m"]
+[ext_resource type="Script" path="res://Scripts/CameraController.gd" id="5_t0j5h"]
+[ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="6_jl1b1"]
+[ext_resource type="Texture2D" uid="uid://b8w8gc2acnbho" path="res://Sprites/Player.png" id="7_nmr8d"]
+[ext_resource type="Texture2D" uid="uid://6kb7xl4ivjqu" path="res://Sprites/PointLight.png" id="8_dwnt5"]
+[ext_resource type="Texture2D" uid="uid://bm2l3c7srfpjb" path="res://Sprites/light.png" id="9_stpo6"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b07km"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_skdgy"]
+polygon = PackedVector2Array(0.25, 0, 8, -8, 0.75, 0.875, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_if01k"]
+texture = ExtResource("1_tnxrv")
+0:0/0 = 0
+0:0/0/z_index = 1
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/z_index = 1
+0:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_skdgy")
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jwx2t"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8udu2"]
+texture = ExtResource("2_vtgrf")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_jwx2t")
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_ddc6b"]
+occlusion_layer_0/light_mask = 1
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_b07km")
+sources/0 = SubResource("TileSetAtlasSource_if01k")
+sources/1 = SubResource("TileSetAtlasSource_8udu2")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xp8qv"]
+
+[node name="Main" type="Node2D"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+clip_children = 2
+z_index = -5
+z_as_relative = false
+color = Color(0.0862745, 0.0862745, 0.0862745, 1)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_ddc6b")
+format = 2
+layer_0/name = "background"
+layer_0/z_index = 1
+layer_1/name = "foreground"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array()
+script = ExtResource("3_vj46o")
+noise_density = 0.58
+width = 55
+height = 55
+iteration = 20
+
+[node name="TilemapOutliner" type="Node2D" parent="TileMap"]
+z_index = 4
+script = ExtResource("4_jdt0m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+script = ExtResource("5_t0j5h")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+light_mask = 0
+z_index = 3
+position = Vector2(74, 74)
+script = ExtResource("6_jl1b1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+scale = Vector2(2.04, 2.04)
+shape = SubResource("CircleShape2D_xp8qv")
+debug_color = Color(0.87451, 0, 0.843137, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+z_index = 3
+z_as_relative = false
+scale = Vector2(0.203125, 0.195312)
+texture = ExtResource("7_nmr8d")
+flip_h = true
+
+[node name="ShipGlowLight" type="PointLight2D" parent="Player"]
+position = Vector2(-12, 7)
+scale = Vector2(4, 4)
+color = Color(0.87451, 0.792157, 0.254902, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 22.8
+texture = ExtResource("8_dwnt5")
+
+[node name="ShipFlashLight" type="PointLight2D" parent="Player"]
+visible = false
+position = Vector2(142, 4)
+rotation = 3.14159
+shadow_enabled = true
+shadow_filter_smooth = 20.2
+texture = ExtResource("9_stpo6")
