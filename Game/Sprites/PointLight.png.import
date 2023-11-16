@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciw8in5ch1uux"
-path="res://.godot/imported/SeaTiles.png-e48c0a5baaae357be610d71106259601.ctex"
+uid="uid://6kb7xl4ivjqu"
+path="res://.godot/imported/PointLight.png-c7d1f2c52d9d33504a278b6893d15ce8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tilemaps/SeaTiles.png"
-dest_files=["res://.godot/imported/SeaTiles.png-e48c0a5baaae357be610d71106259601.ctex"]
+source_file="res://Game/Sprites/PointLight.png"
+dest_files=["res://.godot/imported/PointLight.png-c7d1f2c52d9d33504a278b6893d15ce8.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmdtnnuh1vs6k"
-path="res://.godot/imported/DirectionalLight.png-18efcd129b31c0537deb8de8e0a03527.ctex"
+uid="uid://ciw8in5ch1uux"
+path="res://.godot/imported/SeaTiles.png-ab3c4cbe2ddc1cffbee4ab40222e28e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/DirectionalLight.png"
-dest_files=["res://.godot/imported/DirectionalLight.png-18efcd129b31c0537deb8de8e0a03527.ctex"]
+source_file="res://Game/Features/Tilemap/Sprites/SeaTiles.png"
+dest_files=["res://.godot/imported/SeaTiles.png-ab3c4cbe2ddc1cffbee4ab40222e28e7.ctex"]
 
 [params]
 

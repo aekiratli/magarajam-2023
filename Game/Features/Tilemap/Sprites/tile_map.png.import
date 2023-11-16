@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6kb7xl4ivjqu"
-path="res://.godot/imported/PointLight.png-14665ca2dfd9231e31ef62b858f5b43d.ctex"
+uid="uid://b2b1ci6kk4aq2"
+path="res://.godot/imported/tile_map.png-b900751d1a63e4a40a8730e6a06abd4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/PointLight.png"
-dest_files=["res://.godot/imported/PointLight.png-14665ca2dfd9231e31ef62b858f5b43d.ctex"]
+source_file="res://Game/Features/Tilemap/Sprites/tile_map.png"
+dest_files=["res://.godot/imported/tile_map.png-b900751d1a63e4a40a8730e6a06abd4e.ctex"]
 
 [params]
 
