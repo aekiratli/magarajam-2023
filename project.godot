@@ -15,6 +15,11 @@ run/main_scene="res://Game/Features/Scenes/main.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://Game/Sprites/GodotIcon.svg"
 
+[autoload]
+
+GameContext="*res://Game/Scripts/GameContext.gd"
+GameManager="*res://Game/Scripts/GameManager.gd"
+
 [input]
 
 move_right={
