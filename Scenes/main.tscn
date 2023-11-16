@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cj5l46sirio3c"]
+[gd_scene load_steps=16 format=3 uid="uid://cj5l46sirio3c"]
 
 [ext_resource type="Texture2D" uid="uid://b2b1ci6kk4aq2" path="res://Tilemaps/tile_map.png" id="1_tnxrv"]
 [ext_resource type="Texture2D" uid="uid://ciw8in5ch1uux" path="res://Tilemaps/SeaTiles.png" id="2_vtgrf"]
@@ -8,7 +8,6 @@
 [ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="6_jl1b1"]
 [ext_resource type="Texture2D" uid="uid://b8w8gc2acnbho" path="res://Sprites/Player.png" id="7_nmr8d"]
 [ext_resource type="Texture2D" uid="uid://6kb7xl4ivjqu" path="res://Sprites/PointLight.png" id="8_dwnt5"]
-[ext_resource type="Texture2D" uid="uid://bm2l3c7srfpjb" path="res://Sprites/light.png" id="9_stpo6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b07km"]
 
@@ -126,11 +125,3 @@ shadow_enabled = true
 shadow_filter = 2
 shadow_filter_smooth = 22.8
 texture = ExtResource("8_dwnt5")
-
-[node name="ShipFlashLight" type="PointLight2D" parent="Player"]
-visible = false
-position = Vector2(142, 4)
-rotation = 3.14159
-shadow_enabled = true
-shadow_filter_smooth = 20.2
-texture = ExtResource("9_stpo6")
