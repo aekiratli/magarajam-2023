@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bq32hhiqqrf85"]
+[gd_scene load_steps=9 format=3 uid="uid://bq32hhiqqrf85"]
 
 [ext_resource type="Script" path="res://Game/Features/Player/Scripts/PlayerController.gd" id="1_fuyg1"]
 [ext_resource type="Texture2D" uid="uid://b8w8gc2acnbho" path="res://Game/Features/Player/Sprites/Player.png" id="1_jnqgf"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Game/Features/Player/Scripts/PlayerMovement.gd" id="2_mwfd1"]
 [ext_resource type="Script" path="res://Game/Features/Resources/Scripts/ResourceManager.gd" id="3_03y03"]
 [ext_resource type="Script" path="res://Game/Features/Player/Scripts/PlayerAttributes.gd" id="3_ydt8t"]
+[ext_resource type="Script" path="res://Game/Features/Player/Scripts/PlayerLighting.gd" id="7_pgnmn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xp8qv"]
 
@@ -23,6 +24,7 @@ script = ExtResource("3_03y03")
 
 [node name="Attributes" type="Node" parent="."]
 script = ExtResource("3_ydt8t")
+_visionRange = 4.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(2.04, 2.04)
@@ -38,10 +40,9 @@ flip_h = true
 
 [node name="ShipGlowLight" type="PointLight2D" parent="."]
 position = Vector2(-12, 7)
-scale = Vector2(4, 4)
 color = Color(0.87451, 0.792157, 0.254902, 1)
 energy = 2.0
 shadow_enabled = true
-shadow_filter = 2
 shadow_filter_smooth = 22.8
 texture = ExtResource("2_i2o11")
+script = ExtResource("7_pgnmn")

@@ -10,6 +10,7 @@ func _ready():
 	MiningLevel.set_level(PlayerData.get_value("MiningLevel", 0))
 	SmithingLevel.set_level(PlayerData.get_value("SmithingLevel", 0))
 	WarfareLevel.set_level(PlayerData.get_value("WarfareLevel", 0))
+	super._ready()
 	
 func _on_scrap_amount_updated():
 	MiningLevel.on_scrap_amount_updated()
