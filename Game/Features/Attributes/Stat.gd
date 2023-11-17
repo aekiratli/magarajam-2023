@@ -42,7 +42,7 @@ func remove_modifier(mod: StatModifier) -> bool:
 	value_updated.emit()
 	return false
 	
-func remove_all_modifiers_from_source(source: Object) -> bool:
+func remove_all_modifiers_from_source(source) -> bool:
 	var num_removals = 0
 	for i in range(_stat_modifiers.size()):
 		var mod = _stat_modifiers[i]

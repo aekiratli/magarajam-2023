@@ -10,7 +10,7 @@ func set_amount(value: float) -> void:
 	_amount = value
 	amount_updated.emit()
 
-func get_amount(value: float):
+func get_amount():
 	return _amount
 
 func gain(value: float):
