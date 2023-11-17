@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://byacp0sok0nek"]
+
+[ext_resource type="Script" path="res://Game/Features/Relics/Scripts/RelicController.gd" id="1_v7x5u"]
+[ext_resource type="Script" path="res://Game/Features/Relics/Scripts/RelicGenerator.gd" id="2_ijkac"]
+
+[node name="Relics" type="Node2D"]
+script = ExtResource("1_v7x5u")
+
+[node name="RelicGenerator" type="Node2D" parent="."]
+script = ExtResource("2_ijkac")
