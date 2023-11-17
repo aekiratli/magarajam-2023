@@ -29,22 +29,22 @@ Can , enerji ve hız geliştirmelerinin her biri 3 seviyeden oluşuyor ve her bi
 
 Gönderdiğimiz drone kendiliğinden 100 can puanına sahip bir şekilde oluşturuluyor. 3 seviyeden oluşan can geliştirmesi seviye başına drone'un canını %20 artırıyor.
 
-Seviye 1: +%20 Can - 20 scrap bedeli
-Seviye 2: +%20 Can - 40 scrap bedeli
+Seviye 1: +%20 Can - 20 scrap bedeli /
+Seviye 2: +%20 Can - 40 scrap bedeli /
 Seviye 3: +%20 Can - 60 scrap bedeli
 
 ## Drone Enerji Geliştirmesi
 
 Gönderdiğimiz drone'un kendiliğinden 300 enerjisi bulunuyor ve her 1 birim enerji 1 saniyede tükendiği için bu bizim tur süremizi belirtiyor. Aynı şekilde 3 seviyeden oluşan can geliştirmesi seviye başına drone'un enerjisini +%50 artırıyor.
-Seviye 1: +%20 Can - 20 scrap bedeli
-Seviye 2: +%20 Can - 40 scrap bedeli
+Seviye 1: +%20 Can - 20 scrap bedeli /
+Seviye 2: +%20 Can - 40 scrap bedeli /
 Seviye 3: +%20 Can - 60 scrap bedeli
 
 ## Drone Hız Geliştirmesi
 
 Son olarak yaptığımız geliştirmeler ile Drone'un su altındaki hareket hızını artırabiliyoruz.
-Seviye 1: +%20 Hareket Hızı - 40 scrap bedeli
-Seviye 2: +%20 Hareket Hızı - 80 scrap bedeli
+Seviye 1: +%20 Hareket Hızı - 40 scrap bedeli /
+Seviye 2: +%20 Hareket Hızı - 80 scrap bedeli /
 Seviye 3: +%20 Hareket Hızı - 120 scrap bedeli
 
 # Skiller ve Relicler
