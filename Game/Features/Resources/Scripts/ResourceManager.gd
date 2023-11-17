@@ -1,15 +1,19 @@
 extends Node
 
-class_name ResourceManager
-
-@onready var GameManager = get_node("/root/GameManager")
-
-var Relic: GameResource
-var Scrap: GameResource
-var RuneStone: GameResource
+@onready var Relic: GameResource
+@onready var Scrap: GameResource
+@onready var RuneStone: GameResource
 
 func _ready():
-	connect("game_started",on_game_started())
+	GameManager.game_started.connect(on_game_started)
 	
 func on_game_started():
 	Scrap.set_amount(0)
+
+func save():
+	var save_dict = {
+		"relic" : Relic.get_amount(),
+		"scrap" : Scrap.get_amount(),
+		"runeStone" : RuneStone.get_amount()
+	}
+	return save_dict

@@ -10,9 +10,9 @@ enum StatModType {
 var Value : float
 var Type : StatModType
 var Order : int
-var Source : Object
+var Source : Variant
 
-func _init(value: float, type: StatModType, order: int = -1, source: Object = null) -> void:
+func _init(value: float, type: StatModType, source, order: int = -1) -> void:
 	Value = value
 	Type = type
 	if	order == -1:
