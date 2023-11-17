@@ -19,7 +19,7 @@ config/icon="res://Game/Sprites/GodotIcon.svg"
 
 GameContext="*res://Game/Scripts/GameContext.gd"
 GameManager="*res://Game/Scripts/GameManager.gd"
-PlayerSaveLoadData="*res://Game/Scripts/PlayerSaveLoadData.gd"
+PlayerData="*res://Game/Scripts/PlayerData.gd"
 
 [input]
 
