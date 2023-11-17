@@ -1,9 +1,11 @@
 extends Camera2D
 
-var speed = 200  # Adjust this value to control the movement speed.
-var smoothing = 5.0  # Adjust this value to control the smoothing effect.
+@export var speed = 200  # Adjust this value to control the movement speed.
+@export var smoothing = 5.0  # Adjust this value to control the smoothing effect.
 
-var target_position = Vector2(50, 50)
+@onready var MapController = get_node("/root/Main/TileMap")
+
+@onready var target_position = MapController.get_starting_coordinates()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
