@@ -83,6 +83,8 @@ Her medeniyetin ilk yeteneği toplayıcılık. Makinemiz bulduğu scavenging rel
 
 Bu skill standart oynanış olan kazmadan savaşmadan etraftan bulduğumuz materyalleri toplamayı daha kolay kılıyor. Görülmesi zor yerlerdeki scrapleri, runestoneları veya başka relicleri çok daha kolay tespit edip topladığımız materyal başına kazandığımız kaynak sayısını artırıyor. Gizlenmiş, saklanmış kaynakları bulmak, etrafı keşfederek sadece toplama odaklı bir oyun geçirebilmemizi sağlıyor.
 
+Scavenging skillinin her seviyesi etrafta hali hazırda bulunan kaynakları görme uzaklığımızı artırarak hem yerden toplayarak kazandığımız scrap miktarını %20 artırıyor hem de runestone ve reliclerin karşımıza daha sık çıkmasını sağlıyor.
+
 # Runestonelar ve Progression
 
 Oyunda bulduğumuz en değerli ve nadir materyal runestonelar. Eski medeniyetten kalma bilgileri ve yazıtları içeren bu taşlar oyunda ilerlememizi ve kalıcı geliştirmeler yapabilmemizi sağlıyor.
