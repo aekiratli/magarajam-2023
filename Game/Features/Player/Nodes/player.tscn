@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bq32hhiqqrf85"]
+[gd_scene load_steps=8 format=3 uid="uid://bq32hhiqqrf85"]
 
 [ext_resource type="Script" path="res://Game/Features/Player/Scripts/PlayerController.gd" id="1_fuyg1"]
 [ext_resource type="Texture2D" uid="uid://b8w8gc2acnbho" path="res://Game/Features/Player/Sprites/Player.png" id="1_jnqgf"]
 [ext_resource type="Texture2D" uid="uid://6kb7xl4ivjqu" path="res://Game/Sprites/PointLight.png" id="2_i2o11"]
 [ext_resource type="Script" path="res://Game/Features/Player/Scripts/PlayerMovement.gd" id="2_mwfd1"]
 [ext_resource type="Script" path="res://Game/Features/Resources/Scripts/ResourceManager.gd" id="3_03y03"]
+[ext_resource type="Script" path="res://Game/Features/Player/Scripts/PlayerAttributes.gd" id="3_ydt8t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xp8qv"]
 
@@ -17,11 +18,11 @@ script = ExtResource("1_fuyg1")
 [node name="Movement" type="Node2D" parent="."]
 script = ExtResource("2_mwfd1")
 
-[node name="Attributes" type="Node" parent="."]
+[node name="ResourceManager" type="Node" parent="."]
 script = ExtResource("3_03y03")
 
-[node name="Resources" type="Node" parent="."]
-script = ExtResource("3_03y03")
+[node name="Attributes" type="Node" parent="."]
+script = ExtResource("3_ydt8t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(2.04, 2.04)

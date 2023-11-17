@@ -4,16 +4,20 @@ const StatModifier = preload("res://Game/Features/Attributes/StatModifer.gd")
 
 signal leveled_up
 
-var _level : Stat
-var _effectiveness : Stat
+var _level : Stat = Stat.new()
+var _effectiveness : Stat = Stat.new()
 var _learned : bool = false
 
 func _ready():
-	GameContext.Player.Resources.Scrap.amount_updated.connect(on_scrap_amount_updated)
+	_level.set_base_value(0)
+	_effectiveness.set_base_value(0)
 
 func level_up():
 	_level.set_base_value(_level.BaseValue + 1 )
 	leveled_up.emit()
+	
+func set_level(val):
+	_level.set_base_value(val)
 	
 func get_level():
 	return _level;

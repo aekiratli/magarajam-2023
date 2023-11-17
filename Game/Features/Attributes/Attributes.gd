@@ -7,20 +7,20 @@ class_name Attributes
 # BECAUSE GODOT IS SHIT
 @export_category("Base")
 @export var _maxHealth : float
-@onready var MaxHealth : Stat
+@onready var MaxHealth : Stat = Stat.new()
 @export var _speed : float
-@onready var Speed : Stat
+@onready var Speed : Stat = Stat.new()
 @export var _rotationSpeed : float
-@onready var RotationSpeed : Stat
+@onready var RotationSpeed : Stat = Stat.new()
 @export var _visionRange : float
-@onready var VisionRange : Stat
+@onready var VisionRange : Stat = Stat.new()
 @export_category("Combat")
 @export var _attackDamage : float
-@onready var AttackDamage : Stat
+@onready var AttackDamage : Stat = Stat.new()
 @export var _attackSpeed : float
-@onready var AttackSpeed : Stat
+@onready var AttackSpeed : Stat = Stat.new()
 @export var _defense : float
-@onready var Defense : Stat
+@onready var Defense : Stat = Stat.new()
 # BECAUSE GODOT IS SHIT
 # BECAUSE GODOT IS SHIT
 
@@ -32,16 +32,3 @@ func _ready():
 	AttackDamage.set_base_value(_attackDamage)
 	AttackSpeed.set_base_value(_attackSpeed)
 	Defense.set_base_value(_defense)
-
-func save():
-	var save_dict = {
-		"max_health" : MaxHealth.BaseValue,
-		"speed" : Speed.BaseValue,
-		"rotation_speed" : RotationSpeed.BaseValue,
-		"vision_range" : VisionRange.BaseValue,
-		"attack_damage" : AttackDamage.BaseValue,
-		"attack_speed" : AttackSpeed.BaseValue,
-		"defense" : Defense.BaseValue
-	}
-	return save_dict
-

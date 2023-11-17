@@ -1,11 +1,9 @@
-extends Node
-
 class_name GameResource
 
 signal amount_updated
 
 var _amount : float
- 
+	
 func set_amount(value: float) -> void:
 	_amount = value
 	amount_updated.emit()
