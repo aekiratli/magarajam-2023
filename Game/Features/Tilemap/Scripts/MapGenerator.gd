@@ -31,3 +31,9 @@ func generate_map():
 			MapController.set_cell(0, Vector2i(x,y), 1, Vector2i(0,1))
 		else:
 			MapController.set_cell(0, Vector2i(x,y), 1, Vector2i(1,1))
+
+func generate_starting_area():
+
+	var starting_pattern = MapController.tile_set.get_pattern(1)
+	starting_pattern.get_used_cells( )
+	MapController.set_pattern(0,Vector2i(width/2, height/2), starting_pattern)

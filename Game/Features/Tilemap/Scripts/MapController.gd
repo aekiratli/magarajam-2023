@@ -9,7 +9,7 @@ extends TileMap
 
 func _ready():
 	MapGenerator.generate_map()
-
+	MapGenerator.generate_starting_area()
 
 func get_wall_tiles_near_global_position(radius: int, position: Vector2i):
 
@@ -27,3 +27,7 @@ func get_wall_tiles_near_global_position(radius: int, position: Vector2i):
 				wall_positions.append(_global_position)
 	
 	return wall_positions
+
+func get_starting_coordinates():
+
+	return map_to_local(Vector2i(height / 2 + 10 , width / 2 + 10))
