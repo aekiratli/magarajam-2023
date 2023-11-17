@@ -8,7 +8,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xp8qv"]
 
-[node name="Player" type="CharacterBody2D" groups=["Saved"]]
+[node name="Player" type="CharacterBody2D" groups=["Player", "Saved"]]
 light_mask = 0
 z_index = 3
 position = Vector2(74, 74)

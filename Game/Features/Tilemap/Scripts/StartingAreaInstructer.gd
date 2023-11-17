@@ -6,7 +6,6 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var starting_coordinates = MapController.get_starting_coordinates()
-	print(starting_coordinates)
 	# move label to starting coordinates
 	StartingAreaInstructer.position = starting_coordinates
 

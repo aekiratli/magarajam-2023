@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cj5l46sirio3c"]
+[gd_scene load_steps=5 format=3 uid="uid://cj5l46sirio3c"]
 
 [ext_resource type="PackedScene" uid="uid://cxsu2qmeuwq4s" path="res://Game/Features/Tilemap/Nodes/tile_map.tscn" id="1_bct2u"]
+[ext_resource type="PackedScene" uid="uid://byacp0sok0nek" path="res://Game/Features/Relics/Nodes/relics.tscn" id="4_khvtm"]
 [ext_resource type="PackedScene" uid="uid://cwdxb571jy0jn" path="res://Game/Features/Camera/Nodes/camera_2d.tscn" id="5_p8r76"]
 [ext_resource type="PackedScene" uid="uid://bq32hhiqqrf85" path="res://Game/Features/Player/Nodes/player.tscn" id="6_dwpbu"]
 
@@ -17,3 +18,5 @@ color = Color(0.0862745, 0.0862745, 0.0862745, 1)
 [node name="Camera2D" parent="." instance=ExtResource("5_p8r76")]
 
 [node name="Player" parent="." instance=ExtResource("6_dwpbu")]
+
+[node name="Relics" parent="." instance=ExtResource("4_khvtm")]
