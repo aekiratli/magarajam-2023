@@ -16,6 +16,7 @@ color = Color(0.0862745, 0.0862745, 0.0862745, 1)
 [node name="TileMap" parent="." instance=ExtResource("1_bct2u")]
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 color = Color(0.972549, 0.933333, 0.603922, 1)
 energy = 0.45
 
