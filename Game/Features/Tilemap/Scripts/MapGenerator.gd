@@ -44,10 +44,11 @@ func generate_starting_area():
 	for cell in starting_pattern.get_used_cells():
 		var cell_pos = cell + offset
 		starting_area_coordinates.append(cell_pos)
+		#MapController.set_cell(0, cell_pos, 1, Vector2i(0,1))
 		# index for map array
-		var index = cell_pos.x + cell_pos.y * width
+#		var index = cell_pos.x + cell_pos.y * width
 		# update map as non minable
-		map[index] = 1
+	#	map[index] = 1
 
 func open_starting_area_doors():
 	if _is_doors_open:
