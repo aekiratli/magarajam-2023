@@ -27,7 +27,8 @@ func set_value(key: String, value):
 	await save_data()
 
 func get_value(key: String, default_value):
-	if data.has(key):
+	#if data.has(key):
+	if false:
 		return data[key]
 	else:
 		return default_value
