@@ -1,7 +1,5 @@
 class_name Skill
 
-const StatModifier = preload("res://Game/Features/Attributes/StatModifer.gd")
-
 signal leveled_up
 
 var _level : Stat = Stat.new()
@@ -30,8 +28,3 @@ func is_learned():
 
 func get_effectiveness():
 	return _effectiveness._value;
-	
-func on_scrap_amount_updated():
-	_effectiveness.remove_all_modifiers_from_source("scrap")
-	var newModifier = StatModifier.new(GameContext.Player.Resources.Scrap.get_amount(), StatModifier.StatModType.PercentAdd, "scrap");
-	_effectiveness.add_modifier(newModifier)

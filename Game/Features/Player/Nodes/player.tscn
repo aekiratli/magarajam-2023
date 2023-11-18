@@ -24,6 +24,7 @@ script = ExtResource("3_03y03")
 
 [node name="Attributes" type="Node" parent="."]
 script = ExtResource("3_ydt8t")
+_maxHealth = 100.0
 _visionRange = 4.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

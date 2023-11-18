@@ -15,4 +15,7 @@ func gain(value: float):
 	set_amount(_amount + value)
 
 func spend(value: float):
-	set_amount(_amount - value)
+	if _amount >= value:
+		set_amount(_amount - value)
+		return true
+	return false

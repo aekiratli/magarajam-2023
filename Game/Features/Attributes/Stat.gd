@@ -9,6 +9,8 @@ var _value : float
 var _stat_modifiers : Array
 var _StatModifiers : Array
 
+var _levelModifier : StatModifier
+
 func _init() -> void:
 	_stat_modifiers = []
 	_StatModifiers = _stat_modifiers
